@@ -1,0 +1,12 @@
+body {
+    background-color: aqua;
+}
+#bedTable {
+    border-color: black;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+td {
+    text-align: center;
+}
