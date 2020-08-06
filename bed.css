@@ -1,12 +1,19 @@
 body {
     background-color: aqua;
 }
-#bedTable {
+.bedTable {
     border-color: black;
     margin-right: auto;
     margin-left: auto;
+    text-align: center;
 }
 
-td {
+#frac {
+    text-align: center;
+}
+#dose {
+    text-align: center;
+}
+#bed {
     text-align: center;
 }

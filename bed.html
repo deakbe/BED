@@ -9,36 +9,28 @@
 </head>
 
 <body>
-    <table id=bedTable, border="2">
+    <table class="bedTable" , border="2">
         <thead>
             <td>Frakció</td>
             <td>Dose</td>
-            <td>Összes</td>
+            <td>BED</td>
         </thead>
         <tr>
-            <td><input type="text"></td>
-            <td><input type="text"></td>
-            <td><input type="text"></td>
-        </tr>
-        <tr>
-            <td><input type="text"></td>
-            <td><input type="text"></td>
-            <td><input type="text"></td>
-        </tr>
-        <tr>
-            <td><input type="text"></td>
-            <td><input type="text"></td>
-            <td><input type="text"></td>
+            <td><input type="text" id="frac" name="frac" value="Frakció szám"></td>
+            <td>
+                <input type="text" id="dose" name="dose" value="Dose">
+            </td>
+            <td><input type="text" id="bed" name="bed" value="BED"></td>
         </tr>
         <tr>
             <td></td>
-            <td><button class="btnCalc" onclick="getBedCalc()">Calc</button></td>
+            <td><button class="btnCalc" onclick=bedCalc()>Calc</button></td>
             <td></td>
         </tr>
-        
+
     </table>
 
-    <script></script>
+    <script> src = "bed.js" </script>
 
 </body>
 
