@@ -13,24 +13,36 @@
         <thead>
             <td>Frakció</td>
             <td>Dose</td>
-            <td>BED</td>
+            <td colspan="2">BED</td>
         </thead>
         <tr>
-            <td><input type="text" id="frac" name="frac" value="Frakció szám"></td>
             <td>
-                <input type="text" id="dose" name="dose" value="Dose">
+                <form>
+                    <input type="text" class="frac" name="frac">
+                </form>
             </td>
-            <td><input type="text" id="bed" name="bed" value="BED"></td>
+            <td>
+                <form>
+                    <input type="text" class="dose" name="dose">
+                </form>
+            </td>
+            <td>
+                <span class="bed"></span>
+            </td>
+            <td>
+                <button onclick="bedCalc()">Calc</button>
+            </td>
         </tr>
-        <tr>
-            <td></td>
-            <td><button class="btnCalc" onclick=bedCalc()>Calc</button></td>
-            <td></td>
-        </tr>
-
     </table>
 
-    <script> src = "bed.js" </script>
+    <!-- <div>
+        <form>
+            <label for="Valami">Valami</label>
+            <input type="text" class ="valami" name="valami">
+        </form>
+    </div>-->
+
+    <script src="bed.js"></script>
 
 </body>
 
