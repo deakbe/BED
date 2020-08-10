@@ -17,3 +17,8 @@ body {
 #bed {
     text-align: center;
 }
+
+.radiation {
+    height: 15px;
+    weight: 15 px;
+}
