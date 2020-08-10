@@ -22,3 +22,9 @@ body {
     height: 15px;
     weight: 15 px;
 }
+
+input.storage {
+    background-color: aqua;
+    border-style: none;
+    text-align: center;
+}

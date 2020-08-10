@@ -13,6 +13,7 @@
         <thead>
             <td>Frakció</td>
             <td>Dose</td>
+            <td>alpha/beta</td>
             <td colspan="2">BED</td>
         </thead>
         <tr>
@@ -26,6 +27,7 @@
                     <input type="text" class="setDose" name="setDose">
                 </form>
             </td>
+            <td rowspan="4"><input type="text" class="storage" value="" readonly></td>
             <td>
                 <span class="bed1">BED</span>
             </td>
@@ -98,7 +100,6 @@
         <input type="radio" onclick="alphaBeta('aB11')" id="aB11" name="alpha" value="1.7"><br>
         <label for=""></label>
         <input type="radio" onclick="alphaBeta('aB12')" id="aB12" name="alpha" value="3"><br>
-        <span class="alphaBeta">valami</span>
     </form>
 
     <script src="bed.js"></script>
