@@ -1,6 +1,48 @@
 let iD = ["aB1", "aB2", "aB3", "aB4", "aB5", "aB6", "aB7", "aB8", "aB9", "aB10", "aB11", "aB12"];
 let alphabeta = ["10", "3.3", "2.1", "3", "3", "4", "3", "2", "4.3", "12.3", "1.7", "3"];
 
+let object = [{
+    "id" : "aB1",
+    "value" : "10"
+},{
+    "id" : "aB2",
+    "value" : "3.3"
+},{
+    "id" : "aB2",
+    "value" : "2.1"
+},{
+    "id" : "aB3",
+    "value" : "3"
+},{
+    "id" : "aB4",
+    "value" : "3"
+},{
+    "id" : "aB5",
+    "value" : "4"
+},{
+    "id" : "aB6",
+    "value" : "3"
+},{
+    "id" : "aB7",
+    "value" : "2"
+},{
+    "id" : "aB8",
+    "value" : "4.3"
+},{
+    "id" : "aB9",
+    "value" : "12.3"
+},{
+    "id" : "aB10",
+    "value" : "1.7"
+},{
+    "id" : "aB11",
+    "value" : "3"
+},{
+    "id" : "aB12",
+    "value" : "10"
+}];
+
+
 /*function alphaBeta(string) {
     let value = 0;
     
@@ -51,36 +93,57 @@ function doseCalc() {
     return (Math.sqrt(parseFloat(frac)*parseFloat(frac)+4*parseFloat(frac)/alpha*bedCalc())-parseFloat(frac))/(2*parseFloat(frac)/alpha);
 }
 
-// Táblázat nem mükszik jól
-/*let table = document.querySelector(".dom");
+
+
+let table = document.querySelector(".dom1");
+for(let i = 0; i < object.lenght;i++) {
+    let tr = document.createElement("tr");
+
+    for(let data of Object.values(object[i])) {
+        let td = document.createElement("td");
+        td.innerHTML = data;
+        tr.appendChild(td);
+    }
+       
+table.appendChild(tr);
+}
+
+/*let table = document.querySelector(".dom1");
 for(let i = 0; i < iD.length;i++) {
     let tr = document.createElement("tr");
-    tr.innerHTML = iD[i];
-    for(let data of Object.values(alphabeta[i])) {
+
+    for(let j = 0; j < 2;j++) {
+        
         let td = document.createElement("td");
         let input = document.createElement("input");
-        td.innerHTML = input;
+        let form = document.createElement("form");
         
+        td.innerHTML = iD[i];
+        form.innerHTML = input;
+        td.innerHTML = form;
+            
         input.setAttribute("type", "radio");
         input.setAttribute("id", iD[i]);
         input.setAttribute("value", alphabeta[i]);
         input.setAttribute("name", "DOM")
-        
+            
         input.addEventListener("click", function() {
             let value = 0;
             let string = this.id;
             value = document.querySelector("#"+this.id).value;
             document.querySelector(".storage").value = parseFloat(value);
-    
+        
             return value;
         });
-        tr.appendChild(input);
-        
+        tr.appendChild(td);
+
     }
-    table.appendChild(tr);
+
+       
+table.appendChild(tr);
 }*/
 
-let x = document.querySelector(".dom");
+/*let x = document.querySelector(".dom");
 for(let i = 0; i < iD.length; i++) {
     let label = document.createElement("label");
     let input = document.createElement("input");
@@ -101,4 +164,6 @@ for(let i = 0; i < iD.length; i++) {
     x.appendChild(label);
     x.appendChild(input);
     x.appendChild(br);
-}
+}*/
+
+ 

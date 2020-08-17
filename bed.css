@@ -35,3 +35,11 @@ input.storage {
     margin-left: auto;
     text-align: center;
 }
+
+.dom1 {
+    border: 2px;
+    border-color: black;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
