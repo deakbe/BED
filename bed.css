@@ -1,7 +1,7 @@
 body {
     background-color: aqua;
 }
-.bedTable {
+table {
     border-color: black;
     margin-right: auto;
     margin-left: auto;
@@ -26,5 +26,12 @@ body {
 input.storage {
     background-color: aqua;
     border-style: none;
+    text-align: center;
+}
+
+.dom {
+    border-color: black;
+    margin-right: auto;
+    margin-left: auto;
     text-align: center;
 }

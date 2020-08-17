@@ -1,6 +1,7 @@
 let iD = ["aB1", "aB2", "aB3", "aB4", "aB5", "aB6", "aB7", "aB8", "aB9", "aB10", "aB11", "aB12"];
+let alphabeta = ["10", "3.3", "2.1", "3", "3", "4", "3", "2", "4.3", "12.3", "1.7", "3"];
 
-function alphaBeta(string) {
+/*function alphaBeta(string) {
     let value = 0;
     
     for(let i = 0; i <= iD.length; i++){
@@ -13,8 +14,7 @@ function alphaBeta(string) {
     document.querySelector(".storage").value = parseFloat(value);
 
     return value;
-}
-console.log();
+}*/
 
 function bedCalc(){
     let alpha = document.querySelector(".storage").value;
@@ -49,4 +49,56 @@ function doseCalc() {
     dose.innerHTML = (Math.sqrt(parseFloat(frac)*parseFloat(frac)+4*parseFloat(frac)/alpha*bedCalc())-parseFloat(frac))/(2*parseFloat(frac)/alpha);;
 
     return (Math.sqrt(parseFloat(frac)*parseFloat(frac)+4*parseFloat(frac)/alpha*bedCalc())-parseFloat(frac))/(2*parseFloat(frac)/alpha);
+}
+
+// Táblázat nem mükszik jól
+/*let table = document.querySelector(".dom");
+for(let i = 0; i < iD.length;i++) {
+    let tr = document.createElement("tr");
+    tr.innerHTML = iD[i];
+    for(let data of Object.values(alphabeta[i])) {
+        let td = document.createElement("td");
+        let input = document.createElement("input");
+        td.innerHTML = input;
+        
+        input.setAttribute("type", "radio");
+        input.setAttribute("id", iD[i]);
+        input.setAttribute("value", alphabeta[i]);
+        input.setAttribute("name", "DOM")
+        
+        input.addEventListener("click", function() {
+            let value = 0;
+            let string = this.id;
+            value = document.querySelector("#"+this.id).value;
+            document.querySelector(".storage").value = parseFloat(value);
+    
+            return value;
+        });
+        tr.appendChild(input);
+        
+    }
+    table.appendChild(tr);
+}*/
+
+let x = document.querySelector(".dom");
+for(let i = 0; i < iD.length; i++) {
+    let label = document.createElement("label");
+    let input = document.createElement("input");
+    let br =document.createElement("br")
+    label.innerHTML = iD[i];
+    input.setAttribute("type", "radio");
+    input.setAttribute("id", iD[i]);
+    input.setAttribute("value", alphabeta[i]);
+    input.setAttribute("name", "DOM")
+    let string = this.id;
+    input.addEventListener("click", function() {
+        let value = 0;
+        value = document.querySelector("#"+this.id).value;
+        document.querySelector(".storage").value = parseFloat(value);
+    
+        return value;
+    });
+    x.appendChild(label);
+    x.appendChild(input);
+    x.appendChild(br);
 }
