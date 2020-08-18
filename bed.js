@@ -3,6 +3,8 @@ let alphaData = [{
 },{
     "id" : "aB2","value" : "3.3"
 },{
+    "id" : "aB2","value" : "3.3"
+},{
     "id" : "aB3","value" : "2.1"
 },{
     "id" : "aB4","value" : "3"
