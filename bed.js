@@ -1,7 +1,7 @@
 let iD = ["aB1", "aB2", "aB3", "aB4", "aB5", "aB6", "aB7", "aB8", "aB9", "aB10", "aB11", "aB12"];
 let alphabeta = ["10", "3.3", "2.1", "3", "3", "4", "3", "2", "4.3", "12.3", "1.7", "3"];
 
-let object = [{
+let alphaData = [{
     "id" : "aB1",
     "value" : "10"
 },{
@@ -93,13 +93,11 @@ function doseCalc() {
     return (Math.sqrt(parseFloat(frac)*parseFloat(frac)+4*parseFloat(frac)/alpha*bedCalc())-parseFloat(frac))/(2*parseFloat(frac)/alpha);
 }
 
-
-
-let table = document.querySelector(".dom1");
-for(let i = 0; i < object.lenght;i++) {
+let table = document.querySelector(".dom");
+for(let i = 0; i < alphaData.length; i++) {
     let tr = document.createElement("tr");
 
-    for(let data of Object.values(object[i])) {
+    for(let data of Object.values(alphaData[i])) {
         let td = document.createElement("td");
         td.innerHTML = data;
         tr.appendChild(td);
@@ -107,6 +105,20 @@ for(let i = 0; i < object.lenght;i++) {
        
 table.appendChild(tr);
 }
+
+//Működő táblázat gombok nélkül
+/*let table = document.querySelector(".dom");
+for(let i = 0; i < alphaData.length; i++) {
+    let tr = document.createElement("tr");
+
+    for(let data of Object.values(alphaData[i])) {
+        let td = document.createElement("td");
+        td.innerHTML = data;
+        tr.appendChild(td);
+    }
+       
+table.appendChild(tr);
+}*/
 
 /*let table = document.querySelector(".dom1");
 for(let i = 0; i < iD.length;i++) {
