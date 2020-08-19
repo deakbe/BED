@@ -93,6 +93,7 @@ function doseCalc() {
     return (Math.sqrt(parseFloat(frac)*parseFloat(frac)+4*parseFloat(frac)/alpha*bedCalc())-parseFloat(frac))/(2*parseFloat(frac)/alpha);
 }
 
+
 let table = document.querySelector(".dom");
 for(let i = 0; i < alphaData.length; i++) {
     let tr = document.createElement("tr");
